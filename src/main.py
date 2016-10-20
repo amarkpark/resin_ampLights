@@ -4,15 +4,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return os.getenv('TFTD', 'Purple Unicorns RULE THE WORLD!!!')
+	return os.getenv('LTBL', "Future's so bright, gotta wear shades!")
 
-@app.route('/on')
+@app.route('/exon')
 def on():
-	return "Warmer ON"
+	return "External lights are now ON"
 
-@app.route('/off')
+@app.route('/exoff')
 def off():
-	return "Warmer OFF"
+	return "External lights are now OFF"
+
+@app.route('/inon')
+def on():
+	return "Internal lights are now ON"
+
+@app.route('/inoff')
+def off():
+	return "Internal lights are now OFF"
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80)
