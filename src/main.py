@@ -7,19 +7,19 @@ def index():
 	return os.getenv('LTBL', "Future's so bright, gotta wear shades!")
 
 @app.route('/exon')
-def on():
+def exon():
 	return "External lights are now ON"
 
 @app.route('/exoff')
-def off():
+def exoff():
 	return "External lights are now OFF"
 
 @app.route('/inon')
-def on():
+def inon():
 	return "Internal lights are now ON"
 
 @app.route('/inoff')
-def off():
+def inoff():
 	return "Internal lights are now OFF"
 
 if __name__ == '__main__':
