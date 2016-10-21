@@ -22,5 +22,9 @@ def inon():
 def inoff():
 	return "Internal lights are now OFF"
 
+@app.route('/whoami')
+def whoami():
+	return os.getenv('DEVID', 'Please set a device ID')
+
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=80)
